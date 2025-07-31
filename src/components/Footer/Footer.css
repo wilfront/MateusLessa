@@ -1,18 +1,18 @@
-.footer {
+footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  background-color: rgba(16, 18, 41, 0.85);
-  backdrop-filter: blur(4px);
-  color: white;
-  padding: 15px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 60px;
+  background-color: rgba(16, 18, 41, 0.8);
   display: flex;
+  align-items: center;
   justify-content: center;
-  z-index: 10;
+  padding: 0 20px;
+  z-index: 5;
+  backdrop-filter: blur(4px);
 }
+
 
 .footer-container {
   width: 100%;
