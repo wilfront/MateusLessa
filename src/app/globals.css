@@ -27,7 +27,7 @@ html{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0; /* fica atrás do overlay e conteúdo */
+  z-index: 1; /* fica atrás do overlay e conteúdo */
   pointer-events: none;
 }
 
