@@ -1,0 +1,110 @@
+.dashboard-container {
+  min-height: 100vh;
+  padding: 120px 20px 100px; /* espaço para o header e footer */
+  background: #0e0f1a;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.dashboard-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffd700;
+}
+
+.dashboard-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.dashboard-tab {
+  background: #1a1c33;
+  color: white;
+  border: 2px solid transparent;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+}
+
+.dashboard-tab:hover {
+  background: #2a2c4a;
+  transform: translateY(-2px);
+}
+
+.dashboard-tab.active {
+  background: #ffd700;
+  color: #101229;
+  font-weight: bold;
+  border-color: #ffd700;
+  transform: scale(1.05);
+}
+
+.dashboard-panel {
+  width: 100%;
+  max-width: 1000px;
+  background: #141627;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animação opcional para suavidade */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo: Tablets */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .dashboard-tab {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    flex: 1 1 45%;
+  }
+
+  .dashboard-panel {
+    padding: 20px;
+  }
+}
+
+/* Responsivo: Celulares */
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-tabs {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .dashboard-tab {
+    flex: 1 1 100%;
+  }
+
+  .dashboard-panel {
+    padding: 16px;
+  }
+}

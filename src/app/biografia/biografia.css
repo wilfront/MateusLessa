@@ -1,0 +1,75 @@
+/* Biografia page ocupa altura entre header e footer */
+.biografia-page {
+  background-image: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 75%), 
+    url('/imagens/foto-lessa.jpg');
+  background-position: 30% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+  padding: 120px 80px 60px; /* espaço pro header e footer */
+  color: #f0f0f0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden; /* evita scroll no body */
+  min-height: calc(100vh - 60px); /* ocupa tela menos o footer */
+}
+
+/* Container que terá scroll interno */
+.bio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  overflow-y: auto;
+   /* header + footer */
+}
+
+/* Conteúdo da bio */
+.bio-conteudo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  background: rgba(15, 15, 40, 0.438);
+  border-radius: 14px;
+  gap: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVO: menor que 604px */
+@media (max-width: 604px) {
+  .biografia-page {
+    height: auto;         /* permite rolagem do body */
+    min-height: auto;     
+    padding: 80px0px;           /* remove todo padding */
+  }
+
+  .bio-container {
+    overflow-y: visible;  /* deixa scroll no body */
+    max-height: none;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .bio-conteudo {
+    padding: 1.5rem 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 80px; /* garante espaço antes do footer fixo */
+  }
+}

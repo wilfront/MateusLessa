@@ -1,0 +1,79 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(16, 18, 41, 0.85);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 15px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* permite quebra em telas pequenas */
+}
+
+/* Links com efeito dourado igual ao header */
+.footer-link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 0;
+  background-color: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffd700;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+    margin: 4px 0;
+  }
+
+  .footer-socials {
+    gap: 12px;
+  }
+}

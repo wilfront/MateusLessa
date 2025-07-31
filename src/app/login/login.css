@@ -1,0 +1,120 @@
+/* login.css */
+
+.login {
+  background: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.6)),
+    url('../../../public/imagens/foto10.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  max-width: 280px; /* um pouco maior pra conforto */
+  padding: 50px 30px;
+  background: #101229;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-color: #2a2c4a;
+  color: white;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 0 2px #ffd700;
+  background-color: #3b3d6b;
+}
+
+button {
+  padding: 12px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #101229;
+  font-size: 1.1rem;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease;
+  /* sombra inicial neutra para a animação shadow aparecer suave */
+  box-shadow: 0 0 0 transparent;
+}
+
+button:hover {
+  background-color: #e6c200;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.9);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ff6b6b;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login {
+    background-position: top center; /* Foca mais no topo da imagem em tablets e celulares */
+  }
+}
+
+@media (max-width: 670px) {
+  .login {
+    background-position: initial;
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+    background-position: initial;
+  }
+
+  form {
+    padding: 30px 20px;
+    max-width: 260px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  button {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
