@@ -28,33 +28,33 @@ html{
   color: white;
 }
 
-/* VÍDEO DE FUNDO */
+/* globals.css ou home.css */
+
 .video-bg {
-  position: absolute;
+  position: fixed; /* Fixa o vídeo no fundo */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -2; /* IMPORTANTE: atrás de tudo */
-  pointer-events: none; /* não bloqueia cliques */
+  pointer-events: none;
 }
 
-/* CAMADA ESCURA EM CIMA DO VÍDEO */
 .overlay {
-  position: absolute;
+  position: fixed; /* Também fixa */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1; /* ainda atrás do conteúdo */
+  background: rgba(0,0,0,0.5);
+  z-index: -1; /* Atrás do conteúdo */
 }
 
-/* CONTEÚDO DA HOME (texto, botões...) */
 .home-content {
   position: relative;
-  z-index: 2; /* acima de tudo */
-  padding: 100px 60px 120px;
+  z-index: 1; /* Acima do overlay */
+  padding: 100px 20px 100px;
+  color: white;
   text-align: center;
 }

@@ -1,4 +1,5 @@
-import './globals.css';
+// app/page.js
+import './globals.css'; // ou outro CSS onde está o vídeo
 
 export default function Home() {
   return (
@@ -6,7 +7,6 @@ export default function Home() {
       <video className="video-bg" autoPlay loop muted playsInline>
         <source src="/video-paper/mateus-lessa.mp4" type="video/mp4" />
       </video>
-
       <div className="overlay" />
     </div>
   );
