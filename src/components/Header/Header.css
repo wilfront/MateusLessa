@@ -4,12 +4,13 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
   height: 70px;
   background-color: rgba(16, 18, 41, 0.8); /* cor com transparência */
   display: flex;
   align-items: center;
   padding: 0 20px;
-  z-index: 1001;
+  z-index: 10;
   backdrop-filter: blur(4px); /* opcional: efeito fosco elegante */
 }
 
