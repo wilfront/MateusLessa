@@ -14,7 +14,6 @@ footer {
   backdrop-filter: blur(4px);
 }
 
-
 .footer-container {
   width: 100%;
   max-width: 1200px;
@@ -22,10 +21,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap; /* permite quebra em telas pequenas */
+  flex-wrap: wrap;
 }
 
-/* Links com efeito dourado igual ao header */
 .footer-link {
   color: white;
   text-decoration: none;
@@ -63,19 +61,23 @@ footer {
   align-items: center;
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
 @media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
-    gap: 8px;
+    gap: 1px;
   }
 
   .footer-link {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin: 4px 0;
   }
 
   .footer-socials {
-    gap: 12px;
+    gap: 10px;
+  }
+
+  .footer-socials i, .footer-socials svg {
+    font-size: 16px !important; /* Reduz tamanho dos ícones */
   }
 }

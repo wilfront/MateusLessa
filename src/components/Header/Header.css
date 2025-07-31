@@ -28,6 +28,7 @@ header {
   margin-left: auto;
 }
 
+
 .menu-list {
   display: flex;
   list-style: none;
@@ -120,7 +121,7 @@ header {
   background-color: #101229;
   padding-top: 70px;
   transition: left 0.3s ease;
-  z-index: 1050;
+  z-index: 3050;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
 }
