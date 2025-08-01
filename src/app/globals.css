@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 
-*{
+* {
   margin: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
@@ -46,15 +46,41 @@ html{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
-
-.home-content {
-  position: relative;
-  z-index: 1; /* Acima do overlay */
-  padding: 100px 20px 100px;
+.btn-agenda {
+  background-color: rgba(255, 255, 255, 0.15); /* branco transparente */
   color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  padding: 1rem 2.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 
+    background-color 0.3s ease, 
+    border-color 0.3s ease,
+    color 0.3s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.btn-agenda:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: white;
+}
+
+
+/* Centralizar home-content no meio da tela */
+.home-content {
+  position: absolute; /* para sair do fluxo */
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* acima do overlay */
   text-align: center;
+  width: 100%;
 }

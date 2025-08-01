@@ -1,5 +1,5 @@
-// app/page.js
-import './globals.css'; // ou outro CSS onde está o vídeo
+import './globals.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -8,6 +8,13 @@ export default function Home() {
         <source src="/video-paper/mateus-lessa.mp4" type="video/mp4" />
       </video>
       <div className="overlay" />
+
+      {/* Conteúdo centralizado */}
+      <div className="home-content">
+        <Link href="/agenda">
+          <button className="btn-agenda">Ver Agenda</button>
+        </Link>
+      </div>
     </div>
-  );
+  )
 }
