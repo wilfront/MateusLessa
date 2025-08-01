@@ -65,7 +65,7 @@ html {
     color 0.3s ease;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  z-index: 2500;
+  z-index: 2800;
 }
 
 .btn-agenda:hover {
